@@ -67,6 +67,30 @@ Graph traversal visualization
 DFS and Backtracking demonstrations
 Educational projects
 
+🚀 Installation
+
+Make sure Python is installed.
+
+Clone the repository
+
+<img width="925" height="264" alt="Screenshot 2026-05-07 155932" src="https://github.com/user-attachments/assets/06da662f-3bf5-4078-a360-06b7d9292025" />
+
+💡 Future Improvements
+
+Add Breadth First Search (BFS)
+
+Add A* Pathfinding
+
+3D Maze Visualization
+
+Save/Load Mazes
+
+Maze Difficulty Levels
+
+Speed Controls
+
+Sound Effects
+
 
 
 
