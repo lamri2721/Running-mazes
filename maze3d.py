@@ -1,25 +1,9 @@
-"""
-Maze Generator and Solver
-=========================
-- Generates a proper maze using a stack-based DFS "mouse" algorithm
-- Every cell is reachable from every other cell (perfect maze)
-- Solves the maze using a backtracking algorithm
-- Animated with tkinter: green = generating path, red = solver, blue = dead ends
-- Bonus: 1-in-20 chance of eating an extra wall to create cycles (defeats shoulder-to-wall rule)
-
-Data Structure:
-    northWall[r][c] = True  → the cell at (r, c) has its north wall intact
-    eastWall[r][c]  = True  → the cell at (r, c) has its east wall intact
-    Row 0 is the bottom row; northWall[0][c] forms the bottom edge of the maze.
-    eastWall[r][0] forms the left edge of the maze.
-"""
-
 import tkinter as tk
 import random
 import time
 from collections import deque
 
-# ──────────────────────────── Configuration ────────────────────────────────
+#  Configuration 
 ROWS        = 15          # number of maze rows
 COLS        = 20          # number of maze columns
 CELL_SIZE   = 40          # pixels per cell
@@ -30,7 +14,7 @@ SOLVE_DELAY = 30          # ms between solver steps
 EXTRA_WALL  = True        # bonus: eat 1-in-20 extra walls to create cycles
 
 
-# ──────────────────────────── Coordinate helpers ───────────────────────────
+#  Coordinate helpers
 def cell_px(r, c):
     """Top-left pixel corner of cell (r, c).  Row 0 is at the BOTTOM."""
     x = MARGIN + c * CELL_SIZE
@@ -38,7 +22,7 @@ def cell_px(r, c):
     return x, y
 
 
-# ──────────────────────────── Maze class ───────────────────────────────────
+# Maze class 
 class Maze:
     def __init__(self, rows, cols):
         self.R = rows
@@ -48,7 +32,7 @@ class Maze:
         self.eastWall  = [[True] * cols for _ in range(rows)]
         self.visited   = [[False] * cols for _ in range(rows)]
 
-    # ── Wall helpers ──────────────────────────────────────────────────────
+    # Wall helpers 
     def remove_wall(self, r1, c1, r2, c2):
         """Remove the wall between adjacent cells (r1,c1) and (r2,c2)."""
         if r2 == r1 + 1:                    # r2 is north of r1
@@ -86,7 +70,7 @@ class Maze:
                 if not self.visited[nr][nc]]
 
 
-# ──────────────────────────── GUI / App ────────────────────────────────────
+# GUI / App 
 class MazeApp:
     def __init__(self, master):
         self.master = master
@@ -121,7 +105,7 @@ class MazeApp:
         self.end    = None
         self._job   = None
 
-    # ── Drawing ───────────────────────────────────────────────────────────
+    # Drawing
     def draw_grid(self):
         """Draw all walls of the current maze state."""
         self.canvas.delete("wall")
@@ -192,7 +176,7 @@ class MazeApp:
             self.canvas.create_line(x+CELL_SIZE, y+1, x+CELL_SIZE, y+CELL_SIZE-1,
                                     fill=bg, width=WALL_WIDTH+1, tags="wall")
 
-    # ── Generation ────────────────────────────────────────────────────────
+    # Generation 
     def start_generation(self):
         if self._job:
             self.master.after_cancel(self._job)
@@ -264,7 +248,7 @@ class MazeApp:
         self.start = (sr, 0)
         self.end   = (er, COLS-1)
 
-    # ── Solver ────────────────────────────────────────────────────────────
+    # Solver 
     def start_solve(self):
         if self._job:
             self.master.after_cancel(self._job)
@@ -326,7 +310,8 @@ class MazeApp:
 
         self._job = self.master.after(SOLVE_DELAY, self._step_solve)
 
-    # ── Reset ─────────────────────────────────────────────────────────────
+    #  Reset
+
     def reset(self):
         if self._job:
             self.master.after_cancel(self._job)
@@ -340,7 +325,7 @@ class MazeApp:
         self.status.config(text="Press Generate to build a maze.")
 
 
-# ──────────────────────────── Entry point ──────────────────────────────────
+# Entry point 
 if __name__ == "__main__":
     root = tk.Tk()
     app  = MazeApp(root)
