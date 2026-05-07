@@ -73,7 +73,7 @@ class Maze:
 
 # GUI / App 
 class MazeApp:
-    def __init__(self, master):
+    def __init__(self, master):   # DFS generation algorithm using stack backtracking
         self.master = master
         master.title("Maze Generator & Solver")
         master.resizable(False, False)
