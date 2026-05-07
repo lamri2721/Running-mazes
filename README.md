@@ -1,98 +1,50 @@
 Maze Generator & Solver 🧩
 
-An interactive Python application that generates, visualizes, and solves mazes using classic Depth First Search (DFS) algorithms with smooth Tkinter animations.
+An interactive Python application that generates and solves mazes visually using advanced DFS and Backtracking algorithms.
 
-This project demonstrates how graph traversal and backtracking algorithms work in a visually engaging way.
+👨‍💻 Author Information
 
-✨ Features
-✅ Random maze generation using DFS stack algorithm
+Name: Tsion Tibebeb
 
-✅ Maze solving using Backtracking DFS
+ID: UGR/5796/16
 
-✅ Beautiful animated visualization
+✨ Project Features
 
-✅ Adjustable maze size
+✔ Random maze generation using DFS
 
-✅ Add extra random walls for more complex mazes
+✔ Maze solving with Backtracking DFS
 
-✅ Scrollable large mazes
+✔ Smooth animated visualization
 
-✅ Color-coded solving process
+✔ Interactive Tkinter GUI
 
-✅ Interactive GUI built with Tkinter
+✔ Adjustable maze dimensions
 
-✅ Dynamic cell scaling for different screen sizes
+✔ Extra wall removal for complex maze structures
 
-🖼️ Visualization Legend
+✔ Dynamic scaling for large mazes
 
-Color	Meaning
-
-🔵 Blue	Start Point
-
-🔴 Red	End Point
-
-🟡 Yellow	Exploring Path
-
-⚪ Gray	Dead End / Backtracking
-
-
-🟢 Green	Final Solution
+✔ Color-coded path exploration
 
 🧠 Algorithms Used
 
-1. Maze Generation — DFS (Stack-Based)
+🔹 Maze Generation
 
-The maze is generated using a randomized Depth First Search algorithm where a virtual “mouse” eats through walls while exploring unvisited cells.
+The maze is generated using a Depth First Search (DFS) stack-based algorithm where cells are visited randomly and walls are removed to create valid paths.
 
-2. Maze Solving — Backtracking DFS
+🔹 Maze Solving
 
-The solver searches for a valid path from the start point to the end point while visually showing:
+The solver uses Backtracking DFS to:
 
-explored cells
-dead ends
-successful solution path
+explore paths
 
-📸 Preview
+detect dead ends
 
-The application visually shows:
+backtrack automatically
 
-maze construction
-path exploration
-backtracking
-final solved route
+discover the final solution
 
-Perfect for:
-
-Data Structures & Algorithms learning
-Graph traversal visualization
-DFS and Backtracking demonstrations
-Educational projects
-
-🚀 Installation
-
-Make sure Python is installed.
-
-Clone the repository
-
-<img width="925" height="264" alt="Screenshot 2026-05-07 155932" src="https://github.com/user-attachments/assets/06da662f-3bf5-4078-a360-06b7d9292025" />
-
-
-
-💡 Future Improvements
-
-Add Breadth First Search (BFS)
-
-Add A* Pathfinding
-
-3D Maze Visualization
-
-Save/Load Mazes
-
-Maze Difficulty Levels
-
-Speed Controls
-
-Sound Effects
+🎨 Visualization Colors
 
 | Color     | Description    |
 | --------- | -------------- |
@@ -102,6 +54,28 @@ Sound Effects
 | ⚪ Gray    | Backtracking   |
 | 🟢 Green  | Final Solution |
 
+🎯 Educational Objectives
+
+This project helps demonstrate:
+
+Graph traversal
+DFS algorithms
+Backtracking concepts
+Pathfinding logic
+GUI development in Python
+
+⭐ Future Improvements
+
+BFS Solver
+A* Algorithm
+3D Maze Visualization
+Save/Load Mazes
+Speed Controller
+Sound Effects
+
+📜 License
+
+This project is developed for educational purposes
 
 
 
