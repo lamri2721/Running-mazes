@@ -26,6 +26,7 @@ This project demonstrates how graph traversal and backtracking algorithms work i
 🖼️ Visualization Legend
 
 Color	Meaning
+
 🔵 Blue	Start Point
 
 🔴 Red	End Point
@@ -75,6 +76,8 @@ Clone the repository
 
 <img width="925" height="264" alt="Screenshot 2026-05-07 155932" src="https://github.com/user-attachments/assets/06da662f-3bf5-4078-a360-06b7d9292025" />
 
+
+
 💡 Future Improvements
 
 Add Breadth First Search (BFS)
@@ -90,6 +93,14 @@ Maze Difficulty Levels
 Speed Controls
 
 Sound Effects
+
+| Color     | Description    |
+| --------- | -------------- |
+| 🔵 Blue   | Start Cell     |
+| 🔴 Red    | End Cell       |
+| 🟡 Yellow | Exploring      |
+| ⚪ Gray    | Backtracking   |
+| 🟢 Green  | Final Solution |
 
 
 
