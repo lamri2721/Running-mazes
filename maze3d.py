@@ -1,3 +1,4 @@
+# Maze wall data structures 
 import tkinter as tk
 import random
 import time
