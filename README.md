@@ -8,6 +8,7 @@ https://www.loom.com/share/3fb4dbcca078410e98a35596024a58d5
 👨‍💻 Author Information
 Name: Tsion Tibebeb
 ID: UGR/5796/16
+
 ✨ Project Overview
 
 This project simulates how a maze is:
@@ -20,7 +21,11 @@ The maze is guaranteed to be a perfect maze (spanning tree), meaning:
 
 Every cell is reachable
 There is exactly one unique path between any two cells
+
+
 🧠 Algorithms Used
+
+
 🔹 1. Maze Generation (DFS Stack)
 
 The maze is created using Depth First Search (DFS):
@@ -32,6 +37,7 @@ Backtrack using a stack when stuck
 
 ✔ Ensures a perfect maze (no loops, no isolated cells)
 
+
 🔹 2. Maze Solving (Backtracking DFS)
 
 The solver uses a second DFS process:
@@ -41,7 +47,11 @@ Explores available paths (no walls)
 Uses a stack to backtrack when dead ends occur
 Continues until the end cell is reached
 
+
+
 🎨 Visualization System
+
+
 
 The maze uses color-coded animation for better understanding:
 
@@ -56,11 +66,16 @@ The maze uses color-coded animation for better understanding:
 | 🟢 Cyan           | Final correct solution path       |
 
 
+
+
 🧱 Maze Representation
 
 Each cell stores walls using:
 
+
 <img width="630" height="81" alt="Screenshot 2026-05-08 124620" src="https://github.com/user-attachments/assets/611be90a-85eb-4f01-99fb-119d79c83d43" />
+
+
 
 Wall Rules:
 True → wall exists
